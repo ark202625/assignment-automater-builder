@@ -1,0 +1,38 @@
+{
+  "project": "Assignment Automater",
+  "version": 1,
+  "status": "READY_FOR_CLOUD_AGENT",
+  "target": {
+    "platform": "Windows",
+    "powershell": "5.1"
+  },
+  "assignment": {
+    "EXP": null,
+    "PDF": null
+  },
+  "goal": "Autonomously build, test, repair, verify and package the Assignment Automater.",
+  "input_policy": "Assignment PDFs are runtime inputs and must never be hardcoded.",
+  "completed": [
+    "Folder and data architecture",
+    "Key system",
+    "EXP/PDF resolution",
+    "Environment detection",
+    "PDF text extraction",
+    "OfficeCLI detection"
+  ],
+  "in_progress": [
+    "Main workflow integration",
+    "Requirement interpretation"
+  ],
+  "remaining": [
+    "DOCX generation",
+    "XLSX generation",
+    "PPTX generation",
+    "Document repair",
+    "Formula/table/chart handling",
+    "Verification hardening",
+    "End-to-end testing",
+    "Portable packaging",
+    "Cloud autonomous controller"
+  ]
+}

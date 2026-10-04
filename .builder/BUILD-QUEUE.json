@@ -1,0 +1,58 @@
+{
+  "tasks": [
+    {
+      "id": "T001",
+      "priority": 100,
+      "title": "Repair and verify PDF analysis integration",
+      "status": "READY"
+    },
+    {
+      "id": "T002",
+      "priority": 95,
+      "title": "Integrate main workflow",
+      "status": "READY"
+    },
+    {
+      "id": "T003",
+      "priority": 90,
+      "title": "Strengthen requirement parser",
+      "status": "READY"
+    },
+    {
+      "id": "T004",
+      "priority": 85,
+      "title": "Separate Practical and Project outputs",
+      "status": "READY"
+    },
+    {
+      "id": "T005",
+      "priority": 80,
+      "title": "Implement Office document inspection and repair",
+      "status": "READY"
+    },
+    {
+      "id": "T006",
+      "priority": 75,
+      "title": "Implement DOCX XLSX PPTX generation",
+      "status": "READY"
+    },
+    {
+      "id": "T007",
+      "priority": 70,
+      "title": "Implement formulas tables and charts",
+      "status": "READY"
+    },
+    {
+      "id": "T008",
+      "priority": 65,
+      "title": "Implement end-to-end verification",
+      "status": "READY"
+    },
+    {
+      "id": "T009",
+      "priority": 60,
+      "title": "Package portable release",
+      "status": "READY"
+    }
+  ]
+}

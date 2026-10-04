@@ -1,0 +1,18 @@
+# Runtime/generated data
+Assignment-Automater-Data/Assignments/Working/
+Assignment-Automater-Data/Assignments/Output/
+Assignment-Automater-Data/Backups/
+Assignment-Automater-Data/Logs/
+Assignment-Automater-Data/Reports/
+
+# Local/editor artifacts
+*.backup-*
+*.bak
+*.tmp
+_IntegrationTemp/
+*.zip
+
+# Secrets
+.env
+.env.*
+!.env.example
