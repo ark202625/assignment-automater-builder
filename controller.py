@@ -45,41 +45,40 @@ def trigger():
             "error": "GEMINI_API_KEY is not configured"
         }), 500
 
-    data = request.get_json(silent=True) or {}
+    try:
+        data = request.get_json(silent=True) or {}
 
-    task = data.get(
-        "task",
-        "Analyze the current Assignment Automater project and identify the next development task."
-    )
+        task = data.get(
+            "task",
+            "Say hello and confirm that you are the AI controller for Assignment Automater."
+        )
 
-    prompt = f"""
+        prompt = f"""
 You are the AI controller for the Assignment Automater project.
-
-Your job is to analyze the supplied task and determine the safest next engineering action.
 
 Task:
 {task}
 
-Return:
-1. Decision
-2. Reason
-3. Next action
-4. Files that should be changed, if any
-
-Do not invent assignment requirements.
-Do not hardcode a specific EXP number or PDF.
-Keep the project generic.
+Respond briefly and confirm that you received the task.
 """
 
-    response = gemini.models.generate_content(
-        model="gemini-2.5-flash",
-        contents=prompt
-    )
+        response = gemini.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt
+        )
 
-    return jsonify({
-        "accepted": True,
-        "decision": response.text
-    })
+        return jsonify({
+            "accepted": True,
+            "decision": response.text
+        })
+
+    except Exception as exc:
+        print("GEMINI ERROR:", repr(exc), flush=True)
+
+        return jsonify({
+            "accepted": False,
+            "error": str(exc)
+        }), 500
 
 
 @app.post("/runner/heartbeat")
