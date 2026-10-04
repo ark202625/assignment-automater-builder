@@ -63,7 +63,7 @@ Respond briefly and confirm that you received the task.
 """
 
         response = gemini.models.generate_content(
-            model="gemini-2.5-flash",
+            model="gemini-3.8-flash",
             contents=prompt
         )
 
